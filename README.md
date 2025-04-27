@@ -77,7 +77,7 @@ e. 验证：测量3个物理比特，验证纠错后得到的逻辑比特状态是否与初始一致。
 - [Quantum Error Correction for Beginners (初学者指南)](https://ar5iv.org/html/0905.2794):  
   Devitt 等人在 2009 年撰写的权威综述对量子纠错的理论基础做了通俗介绍，非常适合已有一定量子背景的读者加深理解。文章通过详细实例解释了经典比特错误和量子错误的区别，首先以 **3比特码** 为起点阐释基本原理，然后介绍了第一个完整的量子纠错码——**9比特 Shor 码**。文中系统讲解了稳定子 Formalism（稳定子规范）在量子纠错中的应用，并讨论了容错量子计算和阈值定理等进阶主题，是学习稳定子码理论的经典参考之一。
 
-- [Stabilizer Codes and Quantum Error Correction (Chapter 1-3)](Week1/Resources):  
+- [Stabilizer Codes and Quantum Error Correction (Chapter 1-3)](Week1\Reference\Stabilizer Codes and Quantum Error Correction(Chapter 1-3).pdf):  
   见 Week1/Resources 文件夹。
 
 ### 代码实现
