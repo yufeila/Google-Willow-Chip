@@ -2,7 +2,7 @@
  * @Author: 杨宇菲 166906656+yufeila@users.noreply.github.com
  * @Date: 2025-04-21 00:25:38
  * @LastEditors: 杨宇菲 17786321727@163.com
- * @LastEditTime: 2025-04-27 13:18:47
+ * @LastEditTime: 2025-04-27 15:45:16
  * @FilePath: /Google-Willow-Chip/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%*AE*
 -->
@@ -72,31 +72,32 @@ e. 验证：测量3个物理比特，验证纠错后得到的逻辑比特状态是否与初始一致。
 ### 理论学习
 
 - [Qiskit 教科书 & IBM 学习课程](https://learning.quantum.ibm.com/course/foundations-of-quantum-error-correction/correcting-quantum-errors):  
+  IBM 提供了面向初学者的在线教材章节，如 *“Correcting Quantum Errors”*，系统讲解了量子错误校正的基本原理和第一个发现的量子码——9比特 Shor 码。课程从经典的三比特重复码引入（说明如何通过多数表决纠正单比特错误），逐步过渡到 Shor 码如何将比特翻转码和相位翻转码级联实现同时纠正 X/Z 错误。教材还强调了 **量子错误离散化** 这一核心概念，即连续微小扰动可等效为有限集合的 Pauli 错误，从而使纠错成为可能。这些官方教程配有交互示例和练习题，有助于巩固概念。
 
-  IBM 提供了面向初学者的在线教材章节，如*“Correcting Quantum Errors”*，系统讲解了量子错误校正的基本原理和第一个发现的量子码——9比特 Shor 码[learning.quantum.ibm.com](https://learning.quantum.ibm.com/course/foundations-of-quantum-error-correction/correcting-quantum-errors#:~:text=For the next four lessons,as the discretization of errors)。课程从经典的三比特重复码引入（说明如何通过多数表决纠正单比特错误[learning.quantum.ibm.com](https://learning.quantum.ibm.com/course/foundations-of-quantum-error-correction/correcting-quantum-errors#:~:text=Encoding and decoding)），逐步过渡到 Shor 码如何将比特翻转码和相位翻转码级联实现同时纠正 X/Z 错误[learning.quantum.ibm.com](https://learning.quantum.ibm.com/course/foundations-of-quantum-error-correction/correcting-quantum-errors#:~:text=The 9)[learning.quantum.ibm.com](https://learning.quantum.ibm.com/course/foundations-of-quantum-error-correction/correcting-quantum-errors#:~:text=Image%3A Encoding circuit for the,Shor code showing 3 blocks)。教材还强调了**量子错误离散化**这一核心概念，即连续微小扰动可等效为有限集合的 Pauli 错误，从而使纠错成为可能[learning.quantum.ibm.com](https://learning.quantum.ibm.com/course/foundations-of-quantum-error-correction/correcting-quantum-errors#:~:text=on the fundamentals,as the discretization of errors)。这些官方教程配有交互示例和练习题，有助于巩固概念。
+- [Quantum Error Correction for Beginners (初学者指南)](https://ar5iv.org/html/0905.2794):  
+  Devitt 等人在 2009 年撰写的权威综述对量子纠错的理论基础做了通俗介绍，非常适合已有一定量子背景的读者加深理解。文章通过详细实例解释了经典比特错误和量子错误的区别，首先以 **3比特码** 为起点阐释基本原理，然后介绍了第一个完整的量子纠错码——**9比特 Shor 码**。文中系统讲解了稳定子 Formalism（稳定子规范）在量子纠错中的应用，并讨论了容错量子计算和阈值定理等进阶主题，是学习稳定子码理论的经典参考之一。
 
-- [Quantum Error Correction for Beginners” (初学者指南)](https://ar5iv.labs.arxiv.org/html/0905.2794#:~:text=4.%20IV%20The%203,1%20Systematic%20gate%20errors)：
-
-  Devitt 等人在 2009 年撰写的权威综述[ar5iv.org](https://ar5iv.org/abs/0905.2794#:~:text=Quantum error correction ,error correction for large scale)对量子纠错的理论基础做了通俗介绍，非常适合已有一定量子背景的读者加深理解。文章通过详细实例解释了经典比特错误和量子错误的区别，首先以**3比特码**为起点阐释基本原理，然后介绍了第一个完整的量子纠错码——**9比特 Shor 码**[ar5iv.org](https://ar5iv.org/abs/0905.2794#:~:text=4. IV The 3,1 Systematic gate errors)。文中系统讲解了稳定子Formalism（稳定子规范）在量子纠错中的应用[ar5iv.org](https://ar5iv.org/abs/0905.2794#:~:text=4. IV The 3,1 Systematic gate errors)，并讨论了容错量子计算和阈值定理等进阶主题，是学习稳定子码理论的经典参考之一。
-
-- [Stabilizer Codes and Quantum Error Correction(Chapter 1-3)]()： 
-
-  见Week1/Resources文件夹
+- [Stabilizer Codes and Quantum Error Correction (Chapter 1-3)](Week1/Resources):  
+  见 Week1/Resources 文件夹。
 
 ### 代码实现
 
-- [Quskit实现3比特比特翻转码电路示例](https://quantumcomputinguk.org/tutorials/quantum-error-correction-bit-flip-code-in-qiskit#:~:text=to%201%20since%20the%20main,qubits%20state%20is%201)
+- [Qiskit 实现 3 比特比特翻转码电路示例](https://quantumcomputinguk.org/tutorials/quantum-error-correction-bit-flip-code-in-qiskit):  
+  详细教程展示了如何使用 Qiskit 构建 3 比特比特翻转码电路。
 
-- [IBM Quantum Learning 重复码教程](https://learning.quantum.ibm.com/tutorial/build-repetition-codes)
+- [IBM Quantum Learning 重复码教程](https://learning.quantum.ibm.com/tutorial/build-repetition-codes):  
+  IBM 提供的教程，讲解如何实现重复码的编码和纠错。
 
+### 教程视频
 
+- [James Wootton 的量子纠错入门](https://www.youtube.com/watch?v=ZY8PddknCos):  
+  James Wootton 的视频教程，介绍量子纠错的基本概念。
 
-## 教程视频
+- [12 Days of Qiskit 系列之量子纠错](https://www.youtube.com/watch?v=e-EaIs-Qr78):  
+  Qiskit 官方系列视频，涵盖量子纠错的基础知识。
 
-- [James Wootton 的量子纠错入门](https://www.youtube.com/watch?v=ZY8PddknCos#:~:text=13,an%20introduction%20to%20the)
-- [12 Days of Qiskit” 系列之量子纠错](https://www.youtube.com/watch?v=e-EaIs-Qr78#:~:text=Playing%20with%20Quantum%20Error%20Correction,looking%20at%20the%20hints%2C)
-- [Steve Girvin 容错计算讲座](https://www.youtube.com/watch?v=PI8PqARCwWo#:~:text=,Yale)
-
+- [Steve Girvin 容错计算讲座](https://www.youtube.com/watch?v=PI8PqARCwWo):  
+  Yale 大学 Steve Girvin 教授的讲座，深入探讨容错量子计算。
 ---
 
 ## 🛠 Simulation Tools
